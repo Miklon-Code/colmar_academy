@@ -1,0 +1,152 @@
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: content-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Nunito Sans", -apple-system, Roboto, "Helvetica Neue", sans-serif;
+}
+
+.img_container {
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+}
+
+#logo_1, #logo_2 {
+    font-size: 1.25rem;
+}
+
+#logo_1 {
+    font-weight: bold;
+}
+
+#logo_2 {
+    color: gray;
+}
+
+.nav_icons {
+    margin-right: 24px;
+}
+
+.nav_icons a {
+    padding-left: 16px;
+    color: rgb(80, 80, 80);
+}
+
+main {
+    top: 64px;
+}
+
+/* Learn something new */
+
+#learn_something_new {
+    background-color: rgb(221, 221, 221);
+    display: flex;
+    align-items: center;
+}
+
+#learn_something_new .img_container {
+    width: 60%;
+    padding: 32px 24px;
+}
+
+#learn_something_new .content {
+    width: 30%;
+}
+
+#learn_something_new .button {
+    width: 100%;
+    padding: 8px 30%;
+    background-color: gray;
+    color: white;
+}
+
+/* Practice */
+
+#practice {
+    height: 800px;
+    overflow: hidden;
+}
+
+#practice .story{
+    width: 60%;
+    margin: 0 24px;
+    float: left;
+}
+
+#practice .story .img_container {
+    padding: 32px 0;
+}
+
+#practice .blog {
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    border-left: 1px solid rgb(228, 228, 228);
+}
+
+#practice .blog::-webkit-scrollbar {
+    display: none;
+}
+
+#practice .blogpost {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+#practice .blogpost .img_container {
+    width: 35%;
+    height: auto;
+    margin: 16px;
+}
+
+/* Start learning */
+
+#start_learning {
+    background-color: rgb(221, 221, 221);
+}
+
+/* Thesis exhibit */
+
+/* Footer */
