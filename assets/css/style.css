@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 html {
@@ -15,7 +15,7 @@ html {
     overflow: hidden;
 }
 
-img {
+img, video {
     max-width: 100%;
 }
 
@@ -69,7 +69,7 @@ header {
     color: rgb(80, 80, 80);
 }
 
-main {
+main, footer {
     top: 64px;
 }
 
@@ -102,19 +102,20 @@ main {
 #practice {
     height: 800px;
     overflow: hidden;
-}
-
-#practice .story{
-    width: 60%;
-    margin: 0 24px;
-    float: left;
-}
-
-#practice .story .img_container {
     padding: 32px 0;
 }
 
-#practice .blog {
+.story_blog .story{
+    width: 60%;
+    padding: 0 24px;
+    float: left;
+}
+
+.story_blog .story .img_container {
+    padding-bottom: 32px 0;
+}
+
+.story_blog .blog {
     vertical-align: top;
     display: flex;
     flex-direction: column;
@@ -122,31 +123,73 @@ main {
     overflow-y: scroll;
     overflow-x: hidden;
     -ms-overflow-style: none;
-    border-left: 1px solid rgb(228, 228, 228);
+    border: 1px solid rgb(228, 228, 228);
 }
 
-#practice .blog::-webkit-scrollbar {
+.story_blog .blog::-webkit-scrollbar {
     display: none;
 }
 
-#practice .blogpost {
+.story_blog .blogpost {
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgb(228, 228, 228);
+    padding: 16px 0;
 }
 
-#practice .blogpost .img_container {
+.story_blog .blogpost .img_container {
     width: 35%;
-    height: auto;
-    margin: 16px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
 }
 
 /* Start learning */
 
 #start_learning {
+    overflow: hidden;
     background-color: rgb(221, 221, 221);
+}
+
+#start_learning h2 {
+    margin: 32px auto;
+    text-align: center;
+}
+
+#start_learning .gallery {
+    display: flex;
+    margin: 32px 72px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery_item {
+    width: 30%;
+    background-color: white;
+    margin: 16px;
+}
+
+.gallery_item .content {
+    padding: 16px 16px 24px 16px;
 }
 
 /* Thesis exhibit */
 
+#thesis_exhibit {
+    overflow: hidden;
+}
+
+#thesis_exhibit h2 {
+    margin: 32px auto;
+    text-align: center;
+}
+
+#thesis_exhibit .story_blog {
+    height: 550px;
+}
+
 /* Footer */
+
+footer {
+    background-color: grey;
+}
