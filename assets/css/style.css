@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 html {
@@ -35,6 +35,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgb(228, 228, 228);
 }
 
 .logo {
@@ -45,7 +46,11 @@ header {
 
 .logo img {
     height: 32px;
-    width: auto;
+    width: 32px;
+}
+
+.mobile {
+    display: none;
 }
 
 #logo_1, #logo_2 {
@@ -87,22 +92,37 @@ main, footer {
 }
 
 #learn_something_new .content {
-    width: 30%;
+    margin-right: 16px;
 }
 
 #learn_something_new .button {
     width: 100%;
-    padding: 8px 30%;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 24px 0 32px 0;
     background-color: gray;
     color: white;
+}
+
+#learn_something_new h1 {
+    margin: 32px 0;
 }
 
 /* Practice */
 
 #practice {
-    height: 800px;
     overflow: hidden;
     padding: 32px 0;
+}
+
+#practice h2 {
+    margin: 32px 0 24px 0;
+}
+
+#practice .autor {
+    margin: 32px 0;
+    color: darkgray;
 }
 
 .story_blog .story{
@@ -166,7 +186,7 @@ main, footer {
 .gallery_item {
     width: 30%;
     background-color: white;
-    margin: 16px;
+    margin: 0 16px 32px 16px;
 }
 
 .gallery_item .content {
@@ -184,12 +204,166 @@ main, footer {
     text-align: center;
 }
 
-#thesis_exhibit .story_blog {
-    height: 550px;
+#thesis_exhibit .story h3 {
+    margin: 24px 0 8px 0;
+}
+
+#thesis_exhibit .story p {
+    margin-bottom: 32px;
+}
+
+#thesis_exhibit .story_blog a:hover {
+    background-color: darkgray;
 }
 
 /* Footer */
 
 footer {
     background-color: grey;
+    color: rgba(255, 255, 255, 0.705);
+}
+
+footer p {
+    padding: 16px 24px;
+    display: inline-block;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.705);
+    float: right;
+    padding: 16px 16px 16px 0;
+}
+
+/* Mobile view */
+
+@media  only screen and (max-width: 650px) {
+
+    /* Header */
+
+    .logo {
+        width: 100%;
+        margin: 0;
+    }
+
+    #logo_1, #logo_2{
+        display: none;
+    }
+
+    .nav_icons {
+        display: none;
+    }
+
+    .icons {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    /* Learn something new */
+
+    #learn_something_new {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #learn_something_new .img_container {
+        width: 100%;
+        padding: 0;
+    }
+
+    #learn_something_new .content {
+        margin: 0 16px;
+    }
+
+    /* Practice */
+
+    #practice {
+        padding: 0;
+    }
+
+    #practice .story {
+        display: none;
+    }
+
+    .story_blog {
+        margin: 0;
+        padding: 0;
+    }
+
+    .blog {
+        width: 100%;
+    }
+
+    .not_mobile {
+        display: none;
+    }
+
+    .blog .blogpost {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        padding: 16px 0 48px 0;
+    }
+
+    .blog .blogpost .img_container {
+        width: auto;
+        padding: 0;
+        margin: 0 16px;
+    }
+
+    .blog .blogpost .content {
+        width: 80%;
+        padding-top: 24px;
+        margin: 0;
+    }
+
+    /* Start learning */
+
+    #start_learning .gallery {
+        flex-direction: column;
+        align-items: center;
+        margin: 32px;
+    }
+
+    .gallery_item {
+        width: 100%;
+        background-color: white;
+        margin: 0 16px 8px 16px;
+    }
+
+    .gallery_item .img_container, .gallery_item p, .gallery_item a {
+        display: none;
+    }
+    
+    .gallery_item .content {
+        padding: 16px;
+    }
+
+    /* Thesis exhibit */
+
+    #thesis_exhibit .blog, #thesis_exhibit .story .content {
+        display: none;
+    }
+
+    #thesis_exhibit .story {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #thesis_exhibit .img_container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Footer */
+
+    footer a {
+        display: none;
+    }
 }
